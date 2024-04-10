@@ -1,6 +1,6 @@
 ![Ali Amirshahi Banner](https://i.ibb.co/2WKr9HR/github-banner-small.png)
 
-<a href="https://github.com/ALPHYPSYCHE">
+<a href="https://github.com/ALPHYPSYCHE/RUST/blob/main/README.md">
     <div style="margin-bottom:1em;"> 
         <img style="margin-right:-.2em;" align="left" src="https://cdn.worldvectorlogo.com/logos/rust.svg" alt="php)" title="PHP" width="100" height="100"/>
     </div>
