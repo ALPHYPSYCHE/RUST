@@ -2,7 +2,7 @@
 
 <a href="https://github.com/ALPHYPSYCHE/RUST/blob/main/README.md">
     <div style="margin-bottom:1em;"> 
-        <img style="margin-right:-.2em;" align="left" src="https://cdn.worldvectorlogo.com/logos/rust.svg" alt="php)" title="PHP" width="100" height="100"/>
+        <img style="margin-right:-.2em;" align="left" src="https://cdn.worldvectorlogo.com/logos/rust.svg" alt="rust)" title="RUST" width="100" height="100"/>
     </div>
     <div style="margin-bottom:-1.5em;">
         <h1 display="display:inline;">
