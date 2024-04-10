@@ -1,0 +1,28 @@
+::::: to start and make a new project with cargo :::::
+
+open terminal in your project folder and run this:
+--> cargo new tutorial2
+
+and then go to the folder and run this (will add some files)
+--> cargo build 
+
+and for debugging go to this folder:
+....\02_project2\tutorial2\target\debug
+
+and run this:
+--> .\tutorial2
+---------------------------
+or you can run this command:
+--> cargo run
+
+you can check if you can compile the code and there is no error without running the code.
+--> cargo check
+
+for auto correct the format in the code:
+go to this folder:
+....\02_project2\tutorial2\src
+
+and run this:
+--> rustfmt main.rs
+---------------------------
+.toml --> Toms, Obvious, Minimal, Language
