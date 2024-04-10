@@ -17,11 +17,13 @@
 ﻿
 
 >>> Tutorial 1:
-
+>>> 
+  ```rust
 fn main(){
     println!("HELLO WORLD! THIS IS MY 1ST LINE OF CODE IN RUST!")
 }
-// run it by open terminal and run this: [.\main.exe] in windows, or [./main.exe] in mac/linux
+```
+run it by open terminal and run this: [.\main.exe] in Windows, or [./main.exe] in mac/linux
 
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -30,7 +32,7 @@ fn main(){
 
 ::::: to start and make a new project with cargo :::::
 
-open terminal in your project folder and run this:
+open the terminal in your project folder and run this:
 --> cargo new tutorial2
 
 and then go to the folder and run this (will add some files)
@@ -48,7 +50,7 @@ or you can run this command:
 you can check if you can compile the code and there is no error without running the code.
 --> cargo check
 
-for auto correct the format in the code:
+for auto-correct the format in the code:
 go to this folder:
 ....\02_project2\tutorial2\src
 
@@ -62,6 +64,7 @@ and run this:
 
 >>> Tutorial 3: Variables, Constants
 
+  ```rust
 fn main() {
     //use "mut" for changing the parameter
     let mut x = 12; // its int
@@ -97,12 +100,13 @@ fn main() {
     const SEC_IN_MIN: u32 = 66; //UPPERCASE NAME for const with _ nad no space
     println!("{}",SEC_IN_MIN);
 }
-
+```
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
 >>> Tutorial 4: DATA TYPES
 
+  ```rust
 fn main() {
     println!("Tutorial 4");
 
@@ -123,12 +127,12 @@ fn main() {
     let myword: char = "apple"; // charecter
 
     let tup: (i32,bool,char) = (1,true,"aa"); // tupple & they are immutable
-    println!("{}", tup.0); // print 1st value of the tupple
-    println!("{}", tup.1); // print 2nd value of the tupple
-    let tup2: (i8,bool,char) = (1,true,"aa"); // you can not assign these 2 numbers because they have different type i32 & i8
-    let mut tup3: (i32,bool,char) = (3,false,"bb"); // mutable tupple
+    println!("{}", tup.0); // print 1st value of the tuple
+    println!("{}", tup.1); // print 2nd value of the tuple
+    let tup2: (i8, bool, char) = (1, true, "aa"); // you can not assign these 2 numbers because they have different type i32 & i8
+    let mut tup3: (i32,bool,char) = (3,false,"bb"); // mutable tuple
     tup3.0 = 10; // only works with mutables & not work with immutables
-    println!("{}", tup3.0); // print 1st value of the tupple
+    println!("{}", tup3.0); // print 1st value of the tuple
     tup3 = (14,true,"rr");
     println!("{}", tup3.0); 
     println!("{}", tup3.1);
@@ -141,16 +145,17 @@ fn main() {
     arr[4]=3;
     println!("{}", arr[4]);
 }
-
+```
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
 >>> Tutorial 5: Console Input
 
 Prelude :
-the prelude is the list of things that rust automatically imports into every rust program.
-its kept as small as possible & is focused on things particularly traits which are used in almost every single rust program.
+the prelude is the list of things that Rust automatically imports into every Rust program.
+It's kept as small as possible & is focused on things particularly traits that are used in almost every single rust program.
 
+  ```rust
 use std::io; // standard input
 
 fn main() {
@@ -163,14 +168,14 @@ fn main() {
     // if .read_line(&mut input) give us valid value, and if it couldnt read .expect("fail to read line");
     println!("{}", input);
 
-    //.read_line() --> the mothod to read lines.
+    //.read_line() --> the method to read lines.
     //.read_line(input) --> its a copy of the value & will not change the original value
-    //.read_line(& input) -->  with & (ampersand) we use reference.reference in defaullt is immutale.
+    //.read_line(& input) -->  with & (ampersand) we use reference. reference in default is immutable.
     //.read_line(&mut input) -->  the reference in defaullt is immutale. so we change it so we can modify the value of the reference.
-    //.expect("fail to read line") --> will catch any error that occure. error handleing
+    //.expect("fail to read line") --> will catch any error that occure. error handling
 }
-
-// so when we run the code, it start and wait foe the uer input and then it will print the copy of the input.
+```
+so when we run the code, it starts and waits for the user input and then it will print a copy of the input.
 
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
