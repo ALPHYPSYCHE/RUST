@@ -6,13 +6,13 @@
     </div>
     <div style="margin-bottom:-1.5em;">
         <h1 display="display:inline;">
-            <font size="+4">RUST Tutorial</font>
+            <font size="+4">Rust Tutorial</font>
         </h1>
     </div>
 </a>
 
 <div style="margin-left:5em;">
-    <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of PHP programming.</font></span>
+    <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming.</font></span>
 </div>
 ﻿
 
