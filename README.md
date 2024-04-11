@@ -278,7 +278,7 @@ fn main() {
 ```
 1st use ! then && then ||
 
-if / else if / else
+## 💠 if / else if / else
 
 ```rust
 fn main() {    
