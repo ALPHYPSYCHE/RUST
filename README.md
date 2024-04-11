@@ -16,7 +16,7 @@
 </div>
 ﻿
 
-## 💠 Tutorial 1:
+## 💠 Hello World!:
   ```rust
 fn main(){
     println!("HELLO WORLD! THIS IS MY 1ST LINE OF CODE IN RUST!")
