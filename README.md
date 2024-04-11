@@ -180,7 +180,7 @@ so when we run the code, it starts and waits for the user input and then it will
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 6:
+>>> Tutorial 6: Arithmetic & Type Casting
 
 ```rust
 fn main() {
@@ -242,5 +242,19 @@ fn main() {
 
     let o = p as i32 /q; // you will not get the error, but you are overflowing and will give you negative numbers.
     println!("{}", o);
+}
+```
+
+
+for parsing the input :
+
+  ```rust
+use std::io;
+
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("fail to read line");
+    let int_input: i64 = input.trim().parse().unwrap();
+    println!("{}", int_input + 3)
 }
 ```
