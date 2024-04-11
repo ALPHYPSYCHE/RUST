@@ -246,7 +246,7 @@ fn main() {
 }
 ```
 
-## 💠 Conditions and Control Flow (if/else if/else)
+## 💠 Conditions and Control Flow
 
 ```rust
 fn main() {
