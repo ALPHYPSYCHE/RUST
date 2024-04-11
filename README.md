@@ -16,8 +16,7 @@
 </div>
 ﻿
 
->>> Tutorial 1:
->>> 
+## 💠 Tutorial 1:
   ```rust
 fn main(){
     println!("HELLO WORLD! THIS IS MY 1ST LINE OF CODE IN RUST!")
@@ -28,7 +27,7 @@ run it by opening terminal and run this: [.\main.exe] in Windows, or [./main.exe
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 2: Rust Tools (cargo, rustfmt)
+## 💠 Rust Tools (cargo, rustfmt)
 
 ::::: to start and make a new project with cargo :::::
 
@@ -62,7 +61,7 @@ and run this:
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 3: Variables, Constants
+## 💠 Variables, Constants
 
   ```rust
 fn main() {
@@ -104,7 +103,7 @@ fn main() {
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 4: DATA TYPES
+## 💠 DATA TYPES
 
   ```rust
 fn main() {
@@ -149,7 +148,7 @@ fn main() {
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 5: Console Input
+## 💠 Console Input
 
 Prelude :
 the prelude is the list of things that Rust automatically imports into every Rust program.
@@ -180,7 +179,7 @@ so when we run the code, it starts and waits for the user input and then it will
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 6: Arithmetic & Type Casting
+## 💠 Arithmetic & Type Casting
 
 ```rust
 fn main() {
@@ -262,7 +261,7 @@ fn main() {
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 7: Conditions and Control Flow (if/else if/else)
+## 💠 Conditions and Control Flow (if/else if/else)
 
 ```rust
 fn main() {
@@ -323,4 +322,4 @@ fn main() {
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 
->>> Tutorial 8: Functions, Expressions & Statements
+## 💠 Functions, Expressions & Statements
