@@ -29,6 +29,8 @@
 9. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
 10. [Memory Management, Heap & Stack](#memory-management,-heap-&-stack)
 
+Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector.
+
 ## 💠 Hello World!
 
   ```rust
