@@ -12,7 +12,7 @@
 </a>
 
 <div style="margin-left:5em;">
-    <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming.Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector.</font></span>
+    <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming. Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector.</font></span>
 </div>
 
  
@@ -38,7 +38,7 @@ fn main(){
     println!("HELLO WORLD! THIS IS MY 1ST LINE OF CODE IN RUST!")
 }
 ```
-run it by opening terminal and run this: [.\main.exe] in Windows, or [./main.exe] in Mac/Linux
+run it by opening the terminal and run this: [.\main.exe] in Windows, or [./main.exe] in Mac/Linux
 
 
 ## 💠 Rust Tools (cargo, rustfmt)
