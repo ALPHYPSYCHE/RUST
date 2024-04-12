@@ -307,6 +307,11 @@ fn main() {
 
 ## 💠 Functions, Expressions & Statements
 
+rust function can return an expression, but not return a statement.
+statement is like variable declaration --> let x = 20; --> it will not return any value.
+so you can not do this --> let x = let y = 20;
+the expression will give you value. --> macro , function --> in 'let x = 20' the number 20 is an expression
+
 ```rust
 fn main() {
     println!("Tutorial 8");
@@ -336,16 +341,11 @@ fn add_numbers(x: i32, y: i32) {
     println!("The sum is : {}", x + y)
 }
 
-// rust function can return an expression, but not return a statement.
-//statement is like variable declaration --> let x = 20; --> it will not return any value.
-// so you can not do this --> let x = let y = 20;
-//expression will gives you value. --> macro , function --> in 'let x = 20' the number 20 is an expression
-
-// another example of expression:
+//Another example of expression:
 fn main2(){
     let number = {
         let x = 5;
-        x + 2 // this have not ; at the end . so it will return value without ; at the end.
+        x + 2 // this have not ; at the end . so it will return value without; at the end.
     };
     println!(" the number change to : {}", number);
 }
