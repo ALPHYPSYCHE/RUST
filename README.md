@@ -153,7 +153,7 @@ fn main() {
     println!("Tutorial 5");
     let mut input = String::new();
 
-    // librarty     result object          expect
+    // library     result object          expect
     io::stdin().read_line(&mut input).expect("fail to read line");
 
     // if .read_line(&mut input) give us valid value, and if it couldnt read .expect("fail to read line");
@@ -163,10 +163,11 @@ fn main() {
 }
 ```
 .read_line() --> the method to read lines.
-.read_line(input) --> its a copy of the value & will not change the original value
-.read_line(& input) -->  with & (ampersand) we use reference. reference in default is immutable.
-.read_line(&mut input) -->  the reference in defaullt is immutale. so we change it so we can modify the value of the reference.
-.expect("fail to read line") --> will catch any error that occure. error handling
+
+.read_line(input) --> its a copy of the value & will not change the original value..
+.read_line(& input) -->  with & (ampersand) we use reference. reference in default is immutable..
+.read_line(&mut input) -->  the reference in default is immutable. so we change it so we can modify the value of the reference..
+.expect("fail to read line") --> will catch any error that occure. error handling..
 
 so when we run the code, it starts and waits for the user input and then it will print a copy of the input.
 
