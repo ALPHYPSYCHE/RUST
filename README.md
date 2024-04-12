@@ -18,11 +18,11 @@
 ## 📚 Table of Contents
 
 1. [Hello World!](#hello-world!)
-2. [Variables, Constants](#variables,constants)
-3. [](#)
-4. [](#)
-5. [](#)
-6. [](#)
+2. [Rust Tools](#rust-tools)
+3. [Variables, Constants](#variables-,-constants)
+4. [DATA TYPES](#data-types)
+5. [Console Input](#console-input)
+6. [Arithmetic & Type Casting](#arithmetic-&-type-casting)
 
 ## 💠 Hello World!
 
