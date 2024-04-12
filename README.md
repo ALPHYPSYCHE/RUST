@@ -15,6 +15,14 @@
     <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming.</font></span>
 </div>
 ﻿
+## 📚 Table of Contents
+
+1. [Hello World!](#hello-world!)
+2. [Variables, Constants](#variables,constants)
+3. [](#)
+4. [](#)
+5. [](#)
+6. [](#)
 
 ## 💠 Hello World!
 
