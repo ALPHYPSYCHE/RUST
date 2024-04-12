@@ -14,15 +14,20 @@
 <div style="margin-left:5em;">
     <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming.</font></span>
 </div>
-﻿
+
+ 
 ## 📚 Table of Contents
 
 1. [Hello World!](#hello-world!)
 2. [Rust Tools](#rust-tools)
-3. [Variables, Constants](#variables-,-constants)
+3. [Variables, Constants](#variables,-constants)
 4. [DATA TYPES](#data-types)
 5. [Console Input](#console-input)
 6. [Arithmetic & Type Casting](#arithmetic-&-type-casting)
+7. [Conditions and Control Flow](#conditions-and-control-flow)
+8. [if / else if / else](#if-/-else-if-/-else)
+9. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
+10. [Memory Management, Heap & Stack](#memory-management,-heap-&-stack)
 
 ## 💠 Hello World!
 
