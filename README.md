@@ -12,7 +12,7 @@
 </a>
 
 <div style="margin-left:5em;">
-    <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming.</font></span>
+    <span style="vertical-align: middle;"><font size="+2">This tutorial will guide you through the basics of Rust programming.Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector.</font></span>
 </div>
 
  
@@ -29,7 +29,7 @@
 9. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
 10. [Memory Management, Heap & Stack](#memory-management,-heap-&-stack)
 
-Rust is a multi-paradigm, general-purpose programming language that emphasizes performance, type safety, and concurrency. It enforces memory safety—meaning that all references point to valid memory—without a garbage collector.
+
 
 ## 💠 Hello World!
 
