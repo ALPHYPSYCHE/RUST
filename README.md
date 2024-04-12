@@ -37,7 +37,7 @@ and then go to the folder and run this (will add some files)
 --> cargo build 
 
 and for debugging go to this folder:
-....\02_project2\tutorial2\target\debug
+||\02_project2\tutorial2\target\debug
 
 and run this:
 --> .\tutorial2
@@ -50,7 +50,7 @@ you can check if you can compile the code and there is no error without running 
 
 for auto-correct the format in the code:
 go to this folder:
-....\02_project2\tutorial2\src
+||\02_project2\tutorial2\src
 
 and run this:
 --> rustfmt main.rs
@@ -164,10 +164,10 @@ fn main() {
 ```
 .read_line() --> the method to read lines.
 
-.read_line(input) --> its a copy of the value & will not change the original value..
-.read_line(& input) -->  with & (ampersand) we use reference. reference in default is immutable..
-.read_line(&mut input) -->  the reference in default is immutable. so we change it so we can modify the value of the reference..
-.expect("fail to read line") --> will catch any error that occure. error handling..
+.read_line(input) --> its a copy of the value & will not change the original value|
+.read_line(& input) -->  with & (ampersand) we use reference. reference in default is immutable|
+.read_line(&mut input) -->  the reference in default is immutable. so we change it so we can modify the value of the reference|
+.expect("fail to read line") --> will catch any error that occure. error handling|
 
 so when we run the code, it starts and waits for the user input and then it will print a copy of the input.
 
