@@ -174,7 +174,7 @@ fn main() {
   ```rust
 use std::io; // standard input
 use rand::Rng;
-use std::{Write, BufRead, BufReader,ErrorKind};
+use std::io::{Write, BufRead, BufReader,ErrorKind};
 use std::fs::File;
 
 fn main() {
