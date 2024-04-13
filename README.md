@@ -27,6 +27,11 @@
 7. [Conditions and Control Flow](#conditions-and-control-flow)
 8. [if / else if / else](#if-/-else-if-/-else)
 9. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
+10. [Error Handling](#error-handling)
+11. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+12. [Structs and Enums](#structs-and-enums)
+13. [Modules and Crates](#modules-and-crates)
+14. [Traits and Generics](#traits-and-generics)
 
 
 
@@ -46,29 +51,40 @@ run it by opening the terminal and run this: [.\main.exe] in Windows, or [./main
 ::::: to start and make a new project with cargo :::::
 
 open the terminal in your project folder and run this:
---> cargo new tutorial2
+```bash
+cargo new tutorial2
+```
 
 and then go to the folder and run this (will add some files)
---> cargo build 
+```bash
+cargo build 
+```
 
 and for debugging go to this folder:
-||\02_project2\tutorial2\target\debug
-
+```lua
+02_project2\tutorial2\target\debug
+```
 and run this:
---> .\tutorial2
+```bash
+.\tutorial2
+```
 ---------------------------
 or you can run this command:
---> cargo run
-
+```bash
+cargo run
+```
 you can check if you can compile the code and there is no error without running the code.
---> cargo check
-
+```bash
+cargo check
+```
 for auto-correct the format in the code:
 go to this folder:
-||\02_project2\tutorial2\src
+..\02_project2\tutorial2\src
 
 and run this:
---> rustfmt main.rs
+```bash
+rustfmt main.rs
+```
 ---------------------------
 .toml --> Toms, Obvious, Minimal, Language
 
@@ -394,4 +410,135 @@ fn add_numbers_5(x: i64, y: i64) -> i64 {
 }
 ```
 
+💠 Error Handling
 
+```rust
+use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {
+    let f = File::open("hello.txt");
+
+    let f = match f {
+        Ok(file) => file,
+        Err(ref error) if error.kind() == ErrorKind::NotFound => {
+            println!("File not found, creating a new file!");
+            match File::create("hello.txt") {
+                Ok(fc) => fc,
+                Err(e) => panic!("Error creating the file: {:?}", e),
+            }
+        }
+        Err(error) => {
+            panic!("Error opening the file: {:?}", error)
+        }
+    };
+}
+```
+
+💠 Ownership, Borrowing, and Lifetimes
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
+
+💠 Structs and Enums
+
+```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle { width: 30, height: 50 };
+    let rect2 = Rectangle { width: 10, height: 40 };
+    let rect3 = Rectangle { width: 60, height: 45 };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+}
+```
+
+💠 Modules and Crates
+```rust
+mod sound {
+    pub mod instrument {
+        pub fn clarinet() {
+            // Function body code goes here
+        }
+    }
+}
+
+fn main() {
+    crate::sound::instrument::clarinet();
+}
+```
+
+💠 Traits and Generics
+
+```rust
+trait Summary {
+    fn summarize(&self) -> String;
+}
+
+struct NewsArticle {
+    headline: String,
+    location: String,
+    author: String,
+    content: String,
+}
+
+impl Summary for NewsArticle {
+    fn summarize(&self) -> String {
+        format!("{}, by {} ({})", self.headline, self.author, self.location)
+    }
+}
+
+struct Tweet {
+    username: String,
+    content: String,
+    reply: bool,
+    retweet: bool,
+}
+
+impl Summary for Tweet {
+    fn summarize(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
+}
+
+fn main() {
+    let tweet = Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from("of course, as you probably already know, people"),
+        reply: false,
+        retweet: false,
+    };
+
+    println!("1 new tweet: {}", tweet.summarize());
+}
+```
