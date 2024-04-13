@@ -430,6 +430,63 @@ fn add_numbers_5(x: i64, y: i64) -> i64 {
     }
 }
 ```
+## Simple Example
+
+```rust
+use rand::Rng;
+use std::io;
+
+fn main() {
+    greeting();
+    age();
+}
+
+fn greeting() {
+    println!(" ");
+    println!("What is your name?");
+    let mut name = String::new();
+    let greeting = "Nice to meet you.";
+    io::stdin()
+        .read_line(&mut name)
+        .expect("Did not receive input");
+    println!(" ");
+    println!("Hello {}! {}", name.trim(), greeting);
+}
+
+fn age() {
+    println!(" ");
+    println!("How old are you?");
+    let mut age = String::new();
+    let okk = "You are over 18.";
+    let notokk = "Sorry! You are under 18.";
+    io::stdin()
+        .read_line(&mut age)
+        .expect("Did not receive input");
+    let age: i32 = match age.trim().parse() {
+        Ok(num) => num,
+        Err(_) => {
+            println!("Please enter a valid age.");
+            return;
+        }
+    };
+    if age >= 18 {
+        println!(" ");
+        println!("Hmm... ! {}", okk);
+        random_id_gen();
+        println!(" ");
+    } else {
+        println!(" ");
+        println!("Hmm... ! {}", notokk);
+        println!(" ");
+    }
+}
+
+fn random_id_gen() {
+    let random_id_num = rand::thread_rng().gen_range(10000..99999);
+    println!("Your new ID number is: {}", random_id_num);
+    println!(" ");
+}
+```
 
 ## 💠 Error Handling
 
@@ -565,60 +622,4 @@ fn main() {
 }
 ```
 
-## Simple Example
 
-```rust
-use rand::Rng;
-use std::io;
-
-fn main() {
-    greeting();
-    age();
-}
-
-fn greeting() {
-    println!(" ");
-    println!("What is your name?");
-    let mut name = String::new();
-    let greeting = "Nice to meet you.";
-    io::stdin()
-        .read_line(&mut name)
-        .expect("Did not receive input");
-    println!(" ");
-    println!("Hello {}! {}", name.trim(), greeting);
-}
-
-fn age() {
-    println!(" ");
-    println!("How old are you?");
-    let mut age = String::new();
-    let okk = "You are over 18.";
-    let notokk = "Sorry! You are under 18.";
-    io::stdin()
-        .read_line(&mut age)
-        .expect("Did not receive input");
-    let age: i32 = match age.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Please enter a valid age.");
-            return;
-        }
-    };
-    if age >= 18 {
-        println!(" ");
-        println!("Hmm... ! {}", okk);
-        random_id_gen();
-        println!(" ");
-    } else {
-        println!(" ");
-        println!("Hmm... ! {}", notokk);
-        println!(" ");
-    }
-}
-
-fn random_id_gen() {
-    let random_id_num = rand::thread_rng().gen_range(10000..99999);
-    println!("Your new ID number is: {}", random_id_num);
-    println!(" ");
-}
-```
