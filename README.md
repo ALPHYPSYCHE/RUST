@@ -144,9 +144,7 @@ fn main() {
     let a: f64 = 5.67; // float number 64 bit / double precision
 
     let true_or_false: bool = true; // Boolian true
-    let true_or_false2: bool = 1; // Sometimes like this : Boolian true
     let true_or_false3: bool = false; // Boolian false
-    let true_or_false4: bool = 0; // Sometimes like this : Boolian false
 
     let myword: char = "apple"; // charecter
 
