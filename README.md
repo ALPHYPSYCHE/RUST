@@ -27,7 +27,7 @@
 7. [Conditions and Control Flow](#conditions-and-control-flow)
 8. [if / else if / else](#if-/-else-if-/-else)
 9. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
-10. [Memory Management, Heap & Stack](#memory-management,-heap-&-stack)
+
 
 
 
@@ -394,5 +394,4 @@ fn add_numbers_5(x: i64, y: i64) -> i64 {
 }
 ```
 
-## 💠 Memory Management, Heap & Stack
 
