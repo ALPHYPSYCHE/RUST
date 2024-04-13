@@ -127,12 +127,6 @@ fn main() {
     const SEC_IN_MIN: u32 = 66; //UPPERCASE NAME for const with _ and no space
     const PI_NUMBER: f32 = 3.141592;
     println!("{}",SEC_IN_MIN);
-
-    println!("Max u32: {}", u32::MAX);
-    println!("Max u64: {}", u64::MAX);
-    println!("Max f32: {}", f32::MAX);
-    println!("Max f64: {}", f64::MAX);
-    println!("Max usize: {}", usize::MAX);
 }
 ```
 
@@ -174,6 +168,12 @@ fn main() {
     let mut arr2: [i32; 6] = [1,2,3,4,5,6];
     arr[4]=3;
     println!("{}", arr[4]);
+
+    println!("Max u32: {}", u32::MAX);
+    println!("Max u64: {}", u64::MAX);
+    println!("Max f32: {}", f32::MAX);
+    println!("Max f64: {}", f64::MAX);
+    println!("Max usize: {}", usize::MAX);
 }
 ```
 
