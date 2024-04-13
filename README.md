@@ -408,7 +408,7 @@ fn add_numbers_5(x: i64, y: i64) -> i64 {
 }
 ```
 
-💠 Error Handling
+## 💠 Error Handling
 
 ```rust
 use std::fs::File;
@@ -433,7 +433,7 @@ fn main() {
 }
 ```
 
-💠 Ownership, Borrowing, and Lifetimes
+## 💠 Ownership, Borrowing, and Lifetimes
 
 ```rust
 fn main() {
@@ -447,7 +447,7 @@ fn calculate_length(s: &String) -> usize {
 }
 ```
 
-💠 Structs and Enums
+## 💠 Structs and Enums
 
 ```rust
 #[derive(Debug)]
@@ -481,7 +481,8 @@ fn main() {
 }
 ```
 
-💠 Modules and Crates
+## 💠 Modules and Crates
+
 ```rust
 mod sound {
     pub mod instrument {
@@ -496,7 +497,7 @@ fn main() {
 }
 ```
 
-💠 Traits and Generics
+## 💠 Traits and Generics
 
 ```rust
 trait Summary {
