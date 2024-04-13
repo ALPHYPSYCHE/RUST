@@ -22,16 +22,17 @@
 2. [Rust Tools](#rust-tools)
 3. [Variables, Constants](#variables,-constants)
 4. [DATA TYPES](#data-types)
-5. [Console Input](#console-input)
-6. [Arithmetic & Type Casting](#arithmetic-&-type-casting)
-7. [Conditions and Control Flow](#conditions-and-control-flow)
-8. [if / else if / else](#if-/-else-if-/-else)
-9. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
-10. [Error Handling](#error-handling)
-11. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-12. [Structs and Enums](#structs-and-enums)
-13. [Modules and Crates](#modules-and-crates)
-14. [Traits and Generics](#traits-and-generics)
+5. [Import Libraries](#import-libraries)
+6. [Console Input](#console-input)
+7. [Arithmetic & Type Casting](#arithmetic-&-type-casting)
+8. [Conditions and Control Flow](#conditions-and-control-flow)
+9. [if / else if / else](#if-/-else-if-/-else)
+10. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
+11. [Error Handling](#error-handling)
+12. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+13. [Structs and Enums](#structs-and-enums)
+14. [Modules and Crates](#modules-and-crates)
+15. [Traits and Generics](#traits-and-generics)
 
 
 
@@ -169,6 +170,16 @@ fn main() {
 }
 ```
 
+## 💠 Import Libraries
+  ```rust
+use std::io; // standard input
+use rand::Rng;
+use std::{Write, BufRead, BufReader,ErrorKind};
+use std::fs::File;
+
+fn main() {
+    println!("HELLO");
+```
 ## 💠 Console Input
 
 Prelude :
