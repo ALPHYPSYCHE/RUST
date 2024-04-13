@@ -178,7 +178,12 @@ use std::io::{Write, BufRead, BufReader,ErrorKind};
 use std::fs::File;
 
 fn main() {
-    println!("HELLO");
+    println!("What is your name?");
+    let mut name: String = String::new();
+    let greeting: &str = "Nice to meet you";
+    io::stdin().read_line(&mut name).expect("Did Not Receive Input");
+
+    println!("Hello {}! {}", name.trim_end(),greeting); 
 ```
 ## 💠 Console Input
 
