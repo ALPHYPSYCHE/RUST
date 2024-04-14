@@ -369,7 +369,7 @@ fn main() {
     let my_age: i32 = 18;
     let voting_age: i32 = 18;
     match my_age.cmp(&voting_age){
-        Ordering::Less => println!("Can't vote"),
+        Ordering::Less => println!("Can't vote"), // use , instead of ; for match [at the end of the line]
         Ordering::Greater => println!("Can vote"),
         Ordering::Equal => println!("1st vote"),
     };
@@ -447,6 +447,22 @@ fn add_numbers_5(x: i64, y: i64) -> i64 {
     }
 }
 ```
+
+## Simple Example
+
+```rust
+use std::io; // standard input
+use rand::Rng;
+use std::io::{Write, BufRead, BufReader,ErrorKind};
+use std::fs::File;
+
+fn main() {
+    let arr_1: [i32; 4] = [1, 2, 3, 4];
+    println!("1st : {}", arr_1[0]);
+    println!("LLength : {}", arr_1.len());
+}
+```
+
 ## Simple Example
 
 ```rust
