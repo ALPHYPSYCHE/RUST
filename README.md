@@ -333,7 +333,7 @@ fn main() {
 ```
 1st use ! then && then ||
 
-## 💠 if / else if / else
+## 💠 if / else if / else / match
 
 ```rust
 fn main() {    
@@ -356,6 +356,23 @@ fn main() {
     } else {
         println!("Sorry!!")
     }
+}
+```
+match example:
+```rust
+use std::io; // standard input
+use rand::Rng;
+use std::io::{Write, BufRead, BufReader,ErrorKind};
+use std::fs::File;
+
+fn main() {
+    let my_age: i32 = 18;
+    let voting_age: i32 = 18;
+    match my_age.cmp(&voting_age){
+        Ordering::Less => println!("Can't vote"),
+        Ordering::Greater => println!("Can vote"),
+        Ordering::Equal => println!("1st vote"),
+    };
 }
 ```
 
