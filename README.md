@@ -463,7 +463,7 @@ fn main() {
 }
 ```
 
-## Simple Example
+##  Example
 
 ```rust
 use rand::Rng;
