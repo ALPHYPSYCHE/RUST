@@ -462,6 +462,32 @@ fn main() {
     println!("LLength : {}", arr_1.len());
 }
 ```
+## Simple Example
+
+```rust
+use std::io; // standard input
+use rand::Rng;
+use std::io::{Write, BufRead, BufReader,ErrorKind};
+use std::fs::File;
+
+﻿
+
+fn main() {
+    let arr_2: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx: usize = 0;
+    loop {
+        if arr_2[loop_idx] % 2 == 0 {
+            loop_idx +=1;
+            continue;
+        }
+        if arr_2[loop_idx] == 9 {
+            break;
+        }
+        println!("Val : {}", arr_2[loop_idx]);
+        loop_idx +=1;
+    }
+}
+```
 
 ##  Example
 
