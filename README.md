@@ -29,11 +29,12 @@
 9. [Conditions and Control Flow](#conditions-and-control-flow)
 10. [if / else if / else](#if-/-else-if-/-else)
 11. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
-12. [Error Handling](#error-handling)
-13. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-14. [Structs and Enums](#structs-and-enums)
-15. [Modules and Crates](#modules-and-crates)
-16. [Traits and Generics](#traits-and-generics)
+12. [Pointers](#pointers)
+13. [Error Handling](#error-handling)
+14. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+15. [Structs and Enums](#structs-and-enums)
+16. [Modules and Crates](#modules-and-crates)
+17. [Traits and Generics](#traits-and-generics)
 
 
 
@@ -178,9 +179,7 @@ fn main() {
 }
 ```
 
-## 💠 References
-
-#References (&):
+## 💠 References(&)
 References in Rust are lightweight and safe alternatives to pointers. They allow you to borrow values without taking ownership, enabling you to pass values around without transferring ownership.
 References are commonly used when you want to pass data to functions without consuming or modifying it, or when you want to avoid the overhead of copying large data structures.
 References ensure memory safety by enforcing the borrowing rules at compile time, preventing common pitfalls like dangling references or multiple mutable references to the same data.
@@ -496,7 +495,7 @@ fn main() {
     }
 }
 ```
-Pointers (*):
+## 💠 Pointers (*):
 Pointers in Rust are used to directly interact with memory. They are primarily used when you need to manage memory manually, such as in low-level systems programming or when interfacing with C code.
 You typically use pointers when you need to allocate memory dynamically or when you need to work with data at a low level where references are not appropriate.
 Pointers allow for more flexibility and control over memory, but they also require careful management to avoid memory safety issues like null pointer dereferences or dangling pointers.
