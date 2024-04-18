@@ -674,6 +674,27 @@ fn main() {
 
 ```
 
+## 💠 Generics
+
+
+Generics in Rust allow you to write code that can operate on different types without sacrificing type safety or performance. They enable you to write functions, structs, enums, and traits that work with any type, making your code more flexible and reusable.
+
+in this example you can not just add (+) x and y . so we use generic add instead.
+```rust
+use std::ops::Add;
+
+fn main() {
+    println!("Int : 5 + 4 = {}", get_sum_generic(5, 4));
+    println!("Float : 5.3 + 4.7 = {}", get_sum_generic(5.3, 4.7));
+}
+
+fn get_sum_generic <T:Add<Output = T>>(x: T, y: T) -> T {
+    return x + y;
+}
+
+
+```
+
 ## 💠 Error Handling
 
 ```rust
