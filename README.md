@@ -512,7 +512,7 @@ Pointers in Rust are used to directly interact with memory. They are primarily u
 You typically use pointers when you need to allocate memory dynamically or when you need to work with data at a low level where references are not appropriate.
 Pointers allow for more flexibility and control over memory, but they also require careful management to avoid memory safety issues like null pointer dereferences or dangling pointers.
 
-##  Example
+##  Good Example (let's review)
 
 ```rust
 use rand::Rng;
