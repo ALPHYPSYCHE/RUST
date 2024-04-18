@@ -30,11 +30,12 @@
 10. [if / else if / else](#if-/-else-if-/-else)
 11. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
 12. [Pointers](#pointers)
-13. [Error Handling](#error-handling)
-14. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-15. [Structs and Enums](#structs-and-enums)
-16. [Modules and Crates](#modules-and-crates)
-17. [Traits and Generics](#traits-and-generics)
+13. [Array](#array)
+14. [Error Handling](#error-handling)
+15. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+16. [Structs and Enums](#structs-and-enums)
+17. [Modules and Crates](#modules-and-crates)
+18. [Traits and Generics](#traits-and-generics)
 
 
 
@@ -631,6 +632,35 @@ fn menu(name: &str, balance: &mut i32) {
             }
         }
     }
+}
+
+```
+## 💠 Array
+
+In Rust, an array is a fixed-size collection of elements of the same data type stored in contiguous memory. Unlike vectors, which are also collections but dynamically resizable, arrays have a fixed length determined at compile time.
+
+```rust
+
+fn main() {
+    println! ("Tutorial 10 - Array");
+    println! ("-----------");
+    let vec1: Vec<i32> = Vec::new();
+    let mut vec2: Vec<i32> = vec![1,2,3,4];
+    vec2.push(5);
+    println!("1st : {}", vec2[0]);
+    let second: &i32 = &vec2[1];
+    match vec2.get(1){
+        Some(second) => println!("2nd : {}", second), 
+        None => println!("No 2nd value"),
+    }
+    for i in &mut vec2 {
+        *i *= 2;
+    }
+    for i in &vec2 {
+        println!("{}", i);
+    }
+    println! ("Vec Length {}", vec2.len()); 
+    println!("Pop: {:?}", vec2.pop());
 }
 
 ```
