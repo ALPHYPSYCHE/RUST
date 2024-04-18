@@ -386,10 +386,17 @@ fn main() {
 
 ## 💠 Functions, Expressions & Statements
 
-rust function can return an expression, but not return a statement.
+Functions: Functions in Rust are blocks of code that perform a specific task. They are defined using the fn keyword followed by the function name, parameters, return type, and body. Functions can accept parameters, return values, and execute code when called. Rust function can return an expression, but not return a statement.
+
+Expressions: Expressions in Rust are code that produces a value. They can be simple values, function calls, or combinations of operators and operands that evaluate to a value. Expressions can be used in various contexts, such as assigning values to variables, passing arguments to functions, or returning values from functions.
+the expression will give you value. --> macro , function --> in 'let x = 20' the number 20 is an expression
+
+Statements: Statements in Rust are instructions that perform actions but do not produce a value. Unlike expressions, statements are not evaluated to a value and are typically terminated with a semicolon ;. Examples of statements include variable declarations, function declarations, and control flow constructs like if, while, and for loops.
 statement is like variable declaration --> let x = 20; --> it will not return any value.
 so you can not do this --> let x = let y = 20;
-the expression will give you value. --> macro , function --> in 'let x = 20' the number 20 is an expression
+
+In summary, functions define reusable blocks of code, expressions produce values, and statements perform actions. 
+
 
 ```rust
 fn main() {
