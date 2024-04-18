@@ -948,16 +948,22 @@ Traits in Rust are similar to interfaces in other languages and provide a way to
 
 Definition: 
 Traits define a set of methods that types can implement to share behavior.
+
 Implementation: 
 Types can implement traits to provide their own custom behavior for the methods defined in the trait.
+
 Usage: 
 Traits enable code reuse and polymorphism by allowing different types to share common functionality through trait implementations.
+
 Syntax: 
 Traits are defined using the trait keyword, and implementations are done using the impl keyword.
+
 Associated Types and Methods: 
 Traits can define associated types and methods, which allow for more flexible and generic behavior.
+
 Default Implementations: 
 Traits can provide default implementations for methods, which types can override if needed.
+
 Trait Bounds: 
 Functions and methods can specify trait bounds to constrain the types they accept, ensuring that only types implementing certain traits can be used.
 
