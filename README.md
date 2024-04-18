@@ -38,7 +38,7 @@
 18. [HashMap](#hashMap)
 19. [Structs and Enums](#structs-and-enums)
 20. [Modules and Crates](#modules-and-crates)
-21. [Traits and Generics](#traits-and-generics)
+21. [Traits](#traits)
 
 
 
@@ -942,7 +942,7 @@ fn main() {
 }
 ```
 
-## 💠 Traits and Generics
+## 💠 Traits
 
 Traits in Rust are similar to interfaces in other languages and provide a way to define shared behavior across different types.
 
