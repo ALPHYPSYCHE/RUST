@@ -856,6 +856,20 @@ fn main() {
 
 ## 💠 Structs and Enums
 
+Structs:
+short for structures, are custom data types that allow you to group multiple related pieces of data together.
+They are defined using the struct keyword followed by a name and a list of fields.
+Each field has a name and a type, similar to variables.
+Structs enable you to create complex data structures with named fields, providing clarity and organization to your data.
+
+Enums:
+short for enumerations, allow you to define a type that can represent a set of named values.
+Enums are useful for modeling different variants or states of data.
+Each variant can optionally carry associated data of different types.
+Enums are defined using the enum keyword followed by a name and a list of variants.
+
+So, structs are used for grouping related data into custom types with named fields, while enums are used for defining types with a finite set of named values or variants. Both structs and enums are fundamental building blocks for creating custom data types and modeling complex data structures in Rust.
+
 ```rust
 #[derive(Debug)]
 struct Rectangle {
