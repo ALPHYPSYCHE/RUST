@@ -1020,7 +1020,7 @@ fn main() {
 ```
 
 
-## Another Example:
+## Another Example with Generic:
 
 ```rust
 trait Summary {
