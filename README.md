@@ -519,6 +519,7 @@ use rand::Rng;
 use std::io;
 
 fn main() {
+    println!("Tutorial 9");
     println!(" ");
     println!("########### WELCOME TO MY GAME PLATFORM ###########");
 
