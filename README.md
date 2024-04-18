@@ -774,7 +774,23 @@ fn calculate_length(s: &String) -> usize {
     s.len()
 }
 ```
-
+another example (it will not run!)
+you will get error becouse str1 is not exist anymore
+```rust
+fn main() {
+    let str1: String = String::from("World");
+    let str2: String = str1;
+    println!("Hello {}", str1);
+}
+```
+so you should use clone() to make a clone of str1
+```rust
+fn main() {
+    let str1: String = String::from("World");
+    let str2: String = str1.clone();
+    println!("Hello {}", str1);
+}
+```
 ## 💠 Structs and Enums
 
 ```rust
