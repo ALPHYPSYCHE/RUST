@@ -139,7 +139,7 @@ fn main() {
 
   ```rust
 fn main() {
-    println!("Tutorial 4");
+    println!("Tutorial 4 - data types");
 
     let x: i32 = 2; // signed integer number 32 bit - i8/i16/i32/i64/i128 / *default
         //i8 range --> -2^7 to 2^7 -1 --> + & - numbers [-128 to 127]
@@ -212,7 +212,7 @@ It's kept as small as possible & is focused on things particularly traits that a
 use std::io; // standard input
 
 fn main() {
-    println!("Tutorial 5");
+    println!("Tutorial 5 - console input");
     let mut input = String::new();
 
     // library     result object          expect
@@ -236,7 +236,7 @@ so when we run the code, it starts and waits for the user input and then it will
 
 ```rust
 fn main() {
-    println!("Tutorial 6");
+    println!("Tutorial 6 - Arithmetic & Type Casting");
 
     let x: u8 = 12; // u8 --> 0 - 255
     let y: i8 = 10; // i8 --> -128 - 127
@@ -315,7 +315,7 @@ fn main() {
 
 ```rust
 fn main() {
-    println!("Tutorial 7");
+    println!("Tutorial 7 - Conditions and Control Flow");
 
     // conditions :      < > <= >= != ==
     
@@ -404,7 +404,7 @@ In summary, functions define reusable blocks of code, expressions produce values
 
 ```rust
 fn main() {
-    println!("Tutorial 8");
+    println!("Tutorial 8 - Functions, Expressions & Statements");
     my_function();
     add_numbers(14, 11);
     main2();
