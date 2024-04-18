@@ -33,10 +33,11 @@
 13. [Array](#array)
 14. [Generics](#generics)
 15. [Error Handling](#error-handling)
-16. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-17. [Structs and Enums](#structs-and-enums)
-18. [Modules and Crates](#modules-and-crates)
-19. [Traits and Generics](#traits-and-generics)
+16. [Stack and Heap](#stack-and-heap)
+17. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+18. [Structs and Enums](#structs-and-enums)
+19. [Modules and Crates](#modules-and-crates)
+20. [Traits and Generics](#traits-and-generics)
 
 
 
@@ -720,8 +721,31 @@ fn main() {
     };
 }
 ```
+## 💠 Stack and Heap
+
+Stack:
+The stack is a region of memory used for storing variables and function call information in a last-in, first-out (LIFO) manner.
+Variables with a known, fixed size and lifetime are typically allocated on the stack.
+The stack is fast and efficient for memory allocation and deallocation since it involves simple pointer manipulation.
+Stack memory is limited and has a fixed size determined by the operating system or the runtime environment.
+
+Heap:
+The heap is a region of memory used for dynamic memory allocation, where memory is allocated and deallocated at runtime.
+Variables with an unknown size or lifetime, such as those created with Box<T> or Vec<T>, are typically allocated on the heap.
+Memory allocation on the heap involves more complex bookkeeping and can be slower than stack allocation.
+Heap memory is managed by the allocator, which keeps track of allocated and deallocated memory blocks to avoid memory leaks and fragmentation.
+
+In Rust, memory allocation on the heap is explicitly managed using smart pointers like Box<T> or data structures like Vec<T>, while stack allocation is managed implicitly by the compiler based on variable lifetimes and scopes. Rust's ownership and borrowing system helps ensure memory safety by enforcing strict rules for managing memory on both the stack and the heap.
 
 ## 💠 Ownership, Borrowing, and Lifetimes
+ownership, borrowing, and lifetimes are fundamental concepts in Rust's memory management model. Ownership ensures memory safety by tracking resource ownership, borrowing enables temporary access to data without transferring ownership, and lifetimes help prevent dangling references by specifying the validity scope of references. These features collectively make Rust a safe and efficient language for systems programming.
+
+Ownership: Ownership is a central concept in Rust that governs memory management. Every value in Rust has a single owner, and ownership rules ensure that memory is deallocated correctly and efficiently. Ownership rules prevent issues like dangling pointers, data races, and memory leaks by enforcing strict ownership transfer rules.
+
+Borrowing: Borrowing allows you to temporarily loan a reference to a value without transferring ownership. In Rust, you can have either immutable borrows (&T) or mutable borrows (&mut T). Borrowing enables multiple parts of your code to access and operate on data without taking ownership, promoting code reuse and preventing unnecessary copying.
+
+Lifetimes: Lifetimes are annotations that specify the scope for which references are valid. They help the Rust compiler ensure that borrowed references do not outlive the data they point to, preventing the use of invalid references. Lifetimes are expressed using apostrophe (') followed by a name and are often used in function signatures, structs, and trait definitions to specify the relationship between references and the data they borrow.
+
 
 ```rust
 fn main() {
