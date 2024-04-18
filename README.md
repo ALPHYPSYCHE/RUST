@@ -723,17 +723,29 @@ fn main() {
 ```
 ## 💠 Stack and Heap
 
-Stack:
+#Stack:
 The stack is a region of memory used for storing variables and function call information in a last-in, first-out (LIFO) manner.
 Variables with a known, fixed size and lifetime are typically allocated on the stack.
 The stack is fast and efficient for memory allocation and deallocation since it involves simple pointer manipulation.
 Stack memory is limited and has a fixed size determined by the operating system or the runtime environment.
 
-Heap:
+Used for static memory allocation.
+Variables have a fixed size and lifetime.
+Managed automatically by the compiler.
+Fast access and deallocation.
+Limited in size.
+
+#Heap:
 The heap is a region of memory used for dynamic memory allocation, where memory is allocated and deallocated at runtime.
 Variables with an unknown size or lifetime, such as those created with Box<T> or Vec<T>, are typically allocated on the heap.
 Memory allocation on the heap involves more complex bookkeeping and can be slower than stack allocation.
 Heap memory is managed by the allocator, which keeps track of allocated and deallocated memory blocks to avoid memory leaks and fragmentation.
+
+Used for dynamic memory allocation.
+Variables have a dynamic size and lifetime.
+Managed by the programmer.
+Slower access and deallocation compared to the stack.
+Size can grow dynamically during program execution.
 
 In Rust, memory allocation on the heap is explicitly managed using smart pointers like Box<T> or data structures like Vec<T>, while stack allocation is managed implicitly by the compiler based on variable lifetimes and scopes. Rust's ownership and borrowing system helps ensure memory safety by enforcing strict rules for managing memory on both the stack and the heap.
 
