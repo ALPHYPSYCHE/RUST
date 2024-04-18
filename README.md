@@ -31,11 +31,12 @@
 11. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
 12. [Pointers](#pointers)
 13. [Array](#array)
-14. [Error Handling](#error-handling)
-15. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-16. [Structs and Enums](#structs-and-enums)
-17. [Modules and Crates](#modules-and-crates)
-18. [Traits and Generics](#traits-and-generics)
+14. [Generics](#generics)
+15. [Error Handling](#error-handling)
+16. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+17. [Structs and Enums](#structs-and-enums)
+18. [Modules and Crates](#modules-and-crates)
+19. [Traits and Generics](#traits-and-generics)
 
 
 
