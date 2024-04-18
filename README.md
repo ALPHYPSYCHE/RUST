@@ -723,7 +723,7 @@ fn main() {
 ```
 ## 💠 Stack and Heap
 
-#Stack:
+Stack:
 The stack is a region of memory used for storing variables and function call information in a last-in, first-out (LIFO) manner.
 Variables with a known, fixed size and lifetime are typically allocated on the stack.
 The stack is fast and efficient for memory allocation and deallocation since it involves simple pointer manipulation.
@@ -735,7 +735,7 @@ Managed automatically by the compiler.
 Fast access and deallocation.
 Limited in size.
 
-#Heap:
+Heap:
 The heap is a region of memory used for dynamic memory allocation, where memory is allocated and deallocated at runtime.
 Variables with an unknown size or lifetime, such as those created with Box<T> or Vec<T>, are typically allocated on the heap.
 Memory allocation on the heap involves more complex bookkeeping and can be slower than stack allocation.
