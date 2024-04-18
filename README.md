@@ -35,9 +35,10 @@
 15. [Error Handling](#error-handling)
 16. [Stack and Heap](#stack-and-heap)
 17. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-18. [Structs and Enums](#structs-and-enums)
-19. [Modules and Crates](#modules-and-crates)
-20. [Traits and Generics](#traits-and-generics)
+18. [HashMap](#hashMap)
+19. [Structs and Enums](#structs-and-enums)
+20. [Modules and Crates](#modules-and-crates)
+21. [Traits and Generics](#traits-and-generics)
 
 
 
@@ -819,6 +820,37 @@ fn main() {
     //print_str(str1); 
     let str3: String = print_return_str(str1);
     println!("str3 = {}",str3);
+}
+```
+## 💠 HashMap
+A HashMap in Rust is a collection that maps keys to values, allowing for efficient lookup, insertion, and deletion based on the keys.
+
+```rust
+use std::collections::HashMap;
+
+fn main() {
+    println!("Tutorial 12 - HashMap");
+    println!("-----------------------");
+
+    let mut heroes: HashMap<&str, &str> = HashMap::new();
+    heroes.insert("Superman", "Clark Kent");
+    heroes.insert("Batman", "Bruce Wayne");
+    heroes.insert("The Flash", "Barry Allen");
+
+    for (k, v) in heroes.iter() {
+        println!("{} = {}", k, v);
+    }
+
+    println!("Length : {}", heroes.len());
+
+    if heroes.contains_key("Batman") {
+        // Get value with key
+        let the_batman: Option<&&str> = heroes.get("Batman");
+        match the_batman {
+            Some(_x) => println!("Batman is a hero"),
+            None => println!("Batman is not a hero"),
+        }
+    }
 }
 ```
 
