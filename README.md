@@ -438,7 +438,7 @@ fn main2(){
     println!(" the number change to : {}", number);
 }
 
-fn add_numbers_2(x: i32, y: i32) -> i32 { // '->' is the 'return operator' in rust
+fn add_numbers_2(x: i32, y: i32) -> i32 { // '->' is the 'return value operator' in rust
     x + y // without ; at the end.
 }
 
