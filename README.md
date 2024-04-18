@@ -758,6 +758,10 @@ Borrowing: Borrowing allows you to temporarily loan a reference to a value witho
 
 Lifetimes: Lifetimes are annotations that specify the scope for which references are valid. They help the Rust compiler ensure that borrowed references do not outlive the data they point to, preventing the use of invalid references. Lifetimes are expressed using apostrophe (') followed by a name and are often used in function signatures, structs, and trait definitions to specify the relationship between references and the data they borrow.
 
+RULES:
+1. Each value has a variable that's called its owner
+2. There is only one owner at a time
+3. When the owner goes out of scope the value disappears
 
 ```rust
 fn main() {
