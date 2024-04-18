@@ -871,6 +871,28 @@ Enums are defined using the enum keyword followed by a name and a list of varian
 So, structs are used for grouping related data into custom types with named fields, while enums are used for defining types with a finite set of named values or variants. Both structs and enums are fundamental building blocks for creating custom data types and modeling complex data structures in Rust.
 
 ```rust
+fn main() {
+    struct Customer{
+        name: String,
+        address: String,
+        balance: f32,
+    }
+
+    let mut ali = Customer {
+        name: String::from("Ali Amirshahi"),
+        address: String::from("369 Main St"),
+        balance: 120340.50
+    };
+
+    ali.address = String::from("369 Main St");
+    println!("Name : {}", ali.name);
+    println!("Address : {}", ali.address);
+    println!("Balance : {}", ali.balance);
+}
+```
+
+## Another Example:
+```rust
 #[derive(Debug)]
 struct Rectangle {
     width: u32,
