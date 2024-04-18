@@ -343,6 +343,8 @@ fn main() {
 
 ## 💠 if / else if / else / match
 
+if statements are used for simple boolean conditions, while match expressions are more powerful and versatile, allowing pattern matching against different values or patterns. Use if for simple conditions and match for more complex pattern-matching scenarios.
+
 ```rust
 fn main() {    
     let food = "cookie";
