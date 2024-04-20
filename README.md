@@ -772,6 +772,47 @@ fn main() {
 ```
 In this example, if either File::open or file.read_to_string fails, the function will return an error immediately. Otherwise, it will return the file contents wrapped in Ok.
 
+Final Example
+```rust
+use std::fs::File;
+use std::io::{BufReader, BufRead, Write, ErrorKind};
+
+fn main() {
+    println!(" ");
+    println!("Tutorial 16 - Error Handling ");
+    println!("-----------------------------");
+    
+    let path = "lines.txt";
+    let output = File::create(path);
+    let mut output = match output {
+        Ok(file) => file,
+        Err(error) => {
+            panic!("Problem creating file : {:?}", error);
+        }
+    };
+
+    write!(output, "Hello my Friend!\nWhat is going on?").expect("Failed to write to file");
+
+    let input = File::open(path).unwrap();
+    let buffered = BufReader::new(input);
+
+    for line in buffered.lines() {
+        println!("{}", line.unwrap());
+    }
+
+    let output2 = File::create("Random.text");
+    let output2 = match output2 {
+        Ok(file) => file,
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("Random.txt") {
+                Ok(fc) => fc,
+                Err(e) => panic!("Can't create file: {:?}", e),
+            },
+            _other_error => panic!("Problem opening file : {:?}", error),
+        },
+    };
+}
+```
 
 ## 💠 Stack and Heap
 
