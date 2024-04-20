@@ -772,7 +772,7 @@ fn main() {
 ```
 In this example, if either File::open or file.read_to_string fails, the function will return an error immediately. Otherwise, it will return the file contents wrapped in Ok.
 
-## Final Example ( + Read?write Files )
+## Final Example ( + Rea/Write Files )
 ```rust
 use std::fs::File;
 use std::io::{BufReader, BufRead, Write, ErrorKind};
