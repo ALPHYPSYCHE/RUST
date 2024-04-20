@@ -703,28 +703,76 @@ fn get_sum_generic <T:Add<Output = T>>(x: T, y: T) -> T {
 
 In Rust, error handling is primarily done through the Result type for recoverable errors and the panic! macro for unrecoverable errors. Recoverable errors are handled using Result, which represents either a success (Ok) or a failure (Err). Unrecoverable errors cause the program to panic, terminating its execution. Rust encourages explicit error handling and propagation, promoting safer and more predictable code. The ? operator is used for error propagation within functions returning Results, allowing concise error handling.
 
+Result:
+The Result type is used to handle recoverable errors, meaning errors that your program can reasonably be expected to recover from. It is an enum defined as:
+
+Ok(T): Represents a successful computation and contains the result value of type T.
+Err(E): Represents a failed computation and contains an error value of type E.
 ```rust
-use std::fs::File;
-use std::io::ErrorKind;
-
-fn main() {
-    let f = File::open("hello.txt");
-
-    let f = match f {
-        Ok(file) => file,
-        Err(ref error) if error.kind() == ErrorKind::NotFound => {
-            println!("File not found, creating a new file!");
-            match File::create("hello.txt") {
-                Ok(fc) => fc,
-                Err(e) => panic!("Error creating the file: {:?}", e),
-            }
-        }
-        Err(error) => {
-            panic!("Error opening the file: {:?}", error)
-        }
-    };
+enum Result<T, E> {
+    Ok(T),
+    Err(E),
 }
 ```
+By convention, the Ok variant is used for successful results, while the Err variant is used for errors. Example:
+
+In this example, the divide function returns a Result where the success case contains the result of the division and the error case contains a string indicating division by zero.
+```rust
+fn divide(x: i32, y: i32) -> Result<i32, &'static str> {
+    if y == 0 {
+        Err("division by zero")
+    } else {
+        Ok(x / y)
+    }
+}
+
+fn main() {
+    match divide(10, 0) {
+        Ok(result) => println!("Result: {}", result),
+        Err(err) => println!("Error: {}", err),
+    }
+}
+```
+panic!:
+panic! is used to handle unrecoverable errors, such as logic errors or violations of assumptions. When a panic occurs, the program will unwind the stack, clean up resources, and exit. Example:
+```rust
+fn main() {
+    let v = vec![1, 2, 3];
+    println!("Item at index 10: {}", v[10]); // This will panic due to index out of bounds
+}
+```
+Unrecoverable and Recoverable Errors:
+Unrecoverable errors: These are errors that cannot be handled gracefully by the program, like accessing an index out of bounds. They typically cause the program to panic.
+Recoverable errors: These are errors that your program can reasonably recover from, like failing to open a file. These errors are usually handled using Result.
+
+Error Propagation:
+Rust encourages explicit error handling and propagation. When a function encounters an error, it can return a Result, allowing the calling code to decide how to handle it. This promotes safer and more predictable code.
+
+? Operator:
+The ? operator is used to propagate errors. It can only be used within functions that return Result. If the expression evaluates to Err, the function will return immediately with that error. Otherwise, it extracts the value from Ok and continues execution. Example:
+
+```rust
+use std::fs::File;
+use std::io::Read;
+
+fn read_file_contents(filename: &str) -> Result<String, std::io::Error> {
+    let mut file = File::open(filename)?;
+    let mut contents = String::new();
+    file.read_to_string(&mut contents)?;
+    Ok(contents)
+}
+
+fn main() {
+    match read_file_contents("example.txt") {
+        Ok(contents) => println!("File contents: {}", contents),
+        Err(err) => println!("Error reading file: {}", err),
+    }
+}
+
+```
+In this example, if either File::open or file.read_to_string fails, the function will return an error immediately. Otherwise, it will return the file contents wrapped in Ok.
+
+
 ## 💠 Stack and Heap
 
 Stack:
