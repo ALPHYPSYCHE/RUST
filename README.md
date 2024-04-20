@@ -1066,6 +1066,11 @@ Crates can be published to the crates.io package registry for others to use.
 
 In summary, modules organize code within a crate into separate namespaces, while crates are the compilation units that contain modules and can be libraries or executables. Modules and crates help in managing and organizing Rust code, promoting modularity, code reuse, and maintainability.
 
+Modules: Organize & handle privacy
+Crates: Modules that produce a library or executable
+Packages: Build, test, & share crates
+Paths: Naming an item such as a struct, function
+
 ```rust
 mod sound {
     pub mod instrument {
@@ -1080,4 +1085,61 @@ fn main() {
 }
 ```
 
+## Example (Tutorial 15 - Modules and Crates)
 
+we have 2 files. 1st one is the main.rs & the 2nd one is mod.rs (in src/restaurant/mod.rs)
+
+mod.rs (in src/restaurant/mod.rs)
+```rust
+pub mod pizza_order{
+    pub struct Pizza {
+        pub dough: String,
+        pub cheese: String,
+        pub topping: String,
+    }
+
+    impl Pizza {
+        pub fn lunch(topping: &str) -> Pizza {
+            Pizza {
+                dough: "Thin Crust Dough".to_string(),
+                cheese: "Marinara Cheese".to_string(),
+                topping: topping.to_string(),
+            }
+        }
+    }
+
+    pub mod helip_customer{
+        pub fn seat_at_table(){
+            println!("Hello, welcome to the seat at the table!");
+        }
+        pub fn take_order(){
+            super::helip_customer::seat_at_table();
+            let cust_pizza: super::Pizza = super::Pizza::lunch("Mozzarella");
+            super::helip_customer::serve_customer(cust_pizza);
+        }
+
+        pub fn serve_customer(cust_pizza: super::Pizza){
+            println!("Here is your pizza: ");
+            println!("The customer is served a regular pizza with {}", cust_pizza.topping);
+        }
+    
+    }
+}
+
+pub fn order_food(){
+    pizza_order::helip_customer::take_order();
+}
+```
+main.rs
+```rust
+mod restaurant;
+use restaurant::order_food;
+
+fn main() {
+    println!(" ");
+    println!("Tutorial 15 - Modules and Crates ");
+    println!("---------------------------------");
+
+    order_food();
+}
+```
