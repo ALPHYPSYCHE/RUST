@@ -701,6 +701,8 @@ fn get_sum_generic <T:Add<Output = T>>(x: T, y: T) -> T {
 
 ## 💠 Error Handling
 
+In Rust, error handling is primarily done through the Result type for recoverable errors and the panic! macro for unrecoverable errors. Recoverable errors are handled using Result, which represents either a success (Ok) or a failure (Err). Unrecoverable errors cause the program to panic, terminating its execution. Rust encourages explicit error handling and propagation, promoting safer and more predictable code. The ? operator is used for error propagation within functions returning Results, allowing concise error handling.
+
 ```rust
 use std::fs::File;
 use std::io::ErrorKind;
