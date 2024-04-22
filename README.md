@@ -1061,7 +1061,10 @@ fn main() {
 }
 ```
 
-## Another Example:
+## Another Example + implement methods:
+
+In Rust, impl is a keyword used to implement methods and associated functions for a particular trait or struct. It's used to define the behavior of types by providing implementations for traits or defining methods directly on structs. impl blocks allow you to encapsulate functionality and associate it with specific types, enabling code organization and reuse.
+
 ```rust
 #[derive(Debug)]
 struct Rectangle {
