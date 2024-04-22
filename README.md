@@ -1377,3 +1377,9 @@ fn main() {
 
 Concurrency refers to the ability to execute multiple tasks simultaneously. Concurrent programming involves designing and coordinating these tasks to run concurrently, typically to improve performance or responsiveness. Rust provides tools such as threads, channels, and async/await syntax to facilitate concurrent programming while ensuring memory safety and preventing data races through its ownership and borrowing system.
 
+Common problems with parallel programming involve :
+1. Threads are accessing data in the wrong order
+2. Threads are blocked from executing because of confusion
+3. over requirements to proceed with execution
+
+
