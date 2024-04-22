@@ -1555,3 +1555,6 @@ fn main() {
     println!("Total: {}", bank.lock().unwrap().balance);
 }
 ```
+That is it for now. I hope this tutorial helps you to code better with Rust.
+
+Ali Amirshahi
