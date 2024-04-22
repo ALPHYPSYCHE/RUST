@@ -1385,6 +1385,8 @@ Common problems with parallel programming involve :
 2. Threads are blocked from executing because of confusion
 3. over requirements to proceed with execution
 
+A thread is the smallest unit of execution within a process. In a multi-threaded program, multiple threads can run concurrently, allowing different parts of the program to execute independently and simultaneously. Threads share the same memory space within the process and can communicate and synchronize with each other.
+
 ```rust
 use std::thread;
 use std::time::Duration;
