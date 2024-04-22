@@ -27,7 +27,7 @@
 7. [Console Input](#console-input)
 8. [Arithmetic & Type Casting](#arithmetic-&-type-casting)
 9. [Conditions and Control Flow](#conditions-and-control-flow)
-10. [if / else if / else](#if-/-else-if-/-else)
+10. [if / else if / else / match](#if-/-else-if-/-else)
 11. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
 12. [Pointers](#pointers)
 13. [Array](#array)
