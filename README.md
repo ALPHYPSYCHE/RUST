@@ -1467,3 +1467,91 @@ fn main() {
     println!("Final counter value: {:?}", *counter.lock().unwrap());
 }
 ```
+## Bank Example
+
+```rust
+use std::thread;
+
+fn main() {
+
+    pub struct Bank {
+        balance: f32
+    }
+
+    fn withdraw(the_bank: &mut Bank, amt: f32) {
+        the_bank.balance -= amt;
+    }
+
+    // Create bank struct
+    let mut bank = Bank{balance: 100.00};
+    withdraw(&mut bank, 5.00);
+    println!("Balance : {}", bank.balance);
+
+    // Create a customer thread that withdraws money
+    fn customer(the_bank: &mut Bank){
+        withdraw(the_bank, 5.00)
+    }
+
+    // Can't do this closure may outlive the current function, but it borrows `bank`, which is owned by the current function.
+    // If a thread can outlive the main function and the main function has the bank which causes problems.
+
+    thread::spawn(|| {
+        customer(&mut bank)
+    }).join().unwrap();
+}
+```
+But it will not work! we should use smart pointers to solve this problem.
+
+```rust
+use std::rc::Rc;
+use std::cell::RefCell;
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+fn main() {
+    println!(" ");
+    println!("Tutorial 21 - BANK ACCOUNT EXAMPLE ");
+    println!("------------------------------------");
+
+    pub struct Bank {
+        balance: f32
+    }
+
+    fn withdraw(the_bank: &Arc<Mutex<Bank>>, amt:f32){
+        let mut bank_ref = the_bank.lock().unwrap();
+
+        if bank_ref.balance < 5.00{
+            println!("Current Balance : {} Withdrawal a smaller amount",
+            bank_ref.balance);
+        } else {
+            bank_ref.balance -= amt;
+            println!("Customer withdrew {} Current Balance {}",
+            amt, bank_ref.balance);
+        }
+    }
+
+    fn customer(the_bank: Arc<Mutex<Bank>>) {
+        withdraw(&the_bank, 5.00);
+    }
+
+    let bank: Arc<Mutex<Bank>> =
+      Arc::new(Mutex::new(Bank { balance: 20.00 }));
+
+    // Creates 10 customer threads
+    let handles = (0..10).map(|_| {
+
+        // Clone duplicates an the bank object
+        let bank_ref = bank.clone();
+        thread::spawn(|| {
+            customer(bank_ref)
+        })
+    });
+
+    // Wait for all customers to finish
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    println!("Total: {}", bank.lock().unwrap().balance);
+}
+```
