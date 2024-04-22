@@ -1385,4 +1385,72 @@ Common problems with parallel programming involve :
 2. Threads are blocked from executing because of confusion
 3. over requirements to proceed with execution
 
+```rust
+use std::thread;
+use std::time::Duration;
 
+fn main() {
+    println!(" ");
+    println!("Tutorial 20 - Concurrency ");
+    println!("-----------------------------------");
+
+    // Create a thread with spawn
+    
+    thread::spawn(|| {
+        for i in 1..25 {
+            println!("Spawned thread : {}", i);
+
+            // Forces thread to sleep and allow another thread to execute
+            thread::sleep(Duration::from_millis(1));
+        }
+    });
+
+    let thread1 = thread::spawn(|| {
+        for i in 1..25 {
+            println!("Spawned thread : {}", i);
+
+            // Forces thread to sleep and allow another thread to execute
+            thread::sleep(Duration::from_millis(1));
+        }
+    });
+
+    for i in 1..20 {
+        println!("Main thread : {}", i);
+        thread::sleep(Duration::from_millis(1));
+    }
+    
+    thread1.join().unwrap();
+}
+```
+
+## Another example
+
+```rust
+use std::thread;
+use std::sync::{Arc, Mutex};
+
+fn main() {
+    // Shared mutable data protected by a Mutex
+    let counter = Arc::new(Mutex::new(0));
+
+    // Create several threads to increment the counter concurrently
+    let mut handles = vec![];
+    for _ in 0..10 {
+        let counter = Arc::clone(&counter);
+        let handle = thread::spawn(move || {
+            // Acquire the lock to access and modify the shared data
+            let mut num = counter.lock().unwrap();
+            *num += 1;
+        });
+        handles.push(handle);
+    }
+
+    // Wait for all threads to finish
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    // Access the final value of the counter
+    println!("Final counter value: {:?}", *counter.lock().unwrap());
+}
+```
