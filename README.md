@@ -679,7 +679,8 @@ fn main() {
 
 ```
 ## 💠 Iteration
-
+ Iteration refers to the process of sequentially accessing each element of a collection (such as an array, vector, or iterator) to perform some operation or computation on it. This typically involves using constructs like loops (e.g., for loops) or iterator methods (e.g., map, filter, fold) to iterate over the elements.
+ 
 ```rust
 fn main() {
     println!(" ");
