@@ -941,7 +941,7 @@ In Rust, closures are anonymous functions that can capture their enclosing envir
 fn main() {
     println!(" ");
     println!("Tutorial 18 - Closures ");
-    println!("-----------------------------");
+    println!("-----------------------");
 
     // closures is a function without a name. 
     // parameters must be between |  |
