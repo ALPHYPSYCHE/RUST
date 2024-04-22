@@ -1395,8 +1395,8 @@ use std::time::Duration;
 
 fn main() {
     println!(" ");
-    println!("Tutorial 20 - Concurrency ");
-    println!("-----------------------------------");
+    println!("Tutorial 20 - Concurrency + Threads ");
+    println!("------------------------------------");
 
     // Create a thread with spawn
     
