@@ -42,7 +42,7 @@
 22. [Traits](#traits)
 23. [Modules and Crates](#modules-and-crates)
 24. [Smart Pointers / Box](#smart-pointers-/-box)
-25. [Concurrency](#concurrency)
+25. [Concurrency + Threads](#concurrency-+-threads)
 
 
 
@@ -1376,7 +1376,7 @@ fn main() {
     .right_hand(TreeNode::new(3));
 }
 ```
-## 💠 Concurrency
+## 💠 Concurrency + Threads
 
 Concurrency refers to the ability to execute multiple tasks simultaneously. Concurrent programming involves designing and coordinating these tasks to run concurrently, typically to improve performance or responsiveness. Rust provides tools such as threads, channels, and async/await syntax to facilitate concurrent programming while ensuring memory safety and preventing data races through its ownership and borrowing system.
 
