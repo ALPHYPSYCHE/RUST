@@ -21,7 +21,7 @@
 1. [Hello World!](#hello-world!)
 2. [Rust Tools](#rust-tools)
 3. [Variables, Constants](#variables,-constants)
-4. [DATA TYPES](#data-types)
+4. [Data Types](#data-types)
 5. [References](#references)
 6. [Import Libraries](#import-libraries)
 7. [Console Input](#console-input)
