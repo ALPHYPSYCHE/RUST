@@ -1387,6 +1387,8 @@ Common problems with parallel programming involve :
 
 A thread is the smallest unit of execution within a process. In a multi-threaded program, multiple threads can run concurrently, allowing different parts of the program to execute independently and simultaneously. Threads share the same memory space within the process and can communicate and synchronize with each other.
 
+In the context of threads, "spawn" refers to the creation of a new thread of execution. When you spawn a thread, you're instructing the operating system to create a new thread that will run concurrently with the main thread (or other threads) of the program.
+
 ```rust
 use std::thread;
 use std::time::Duration;
