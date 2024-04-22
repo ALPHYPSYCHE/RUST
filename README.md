@@ -1425,6 +1425,15 @@ fn main() {
 
 ## Another example
 
+In this example:
+
+1. We define a counter variable as a shared mutable data protected by a Mutex to ensure safe concurrent access.
+2. We create 10 threads, each of which increments the counter.
+3. Each thread acquires a lock on the counter using lock() before modifying it, ensuring that only one thread can access the counter at a time.
+4. After all threads finish execution, we print the final value of the counter.
+   
+Common problems with parallel programming, such as data races and synchronization issues, are mitigated in Rust through features like ownership, borrowing, and synchronization primitives like Mutex. However, it's still important to be mindful of potential issues and design concurrent programs carefully.
+
 ```rust
 use std::thread;
 use std::sync::{Arc, Mutex};
