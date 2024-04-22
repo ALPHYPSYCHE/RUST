@@ -36,10 +36,11 @@
 16. [Error Handling](#error-handling)
 17. [Stack and Heap](#stack-and-heap)
 18. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-19. [HashMap](#hashMap)
-20. [Structs and Enums](#structs-and-enums)
-21. [Traits](#traits)
-22. [Modules and Crates](#modules-and-crates)
+19. [Closures](#closures)
+20. [HashMap](#hashMap)
+21. [Structs and Enums](#structs-and-enums)
+22. [Traits](#traits)
+23. [Modules and Crates](#modules-and-crates)
 
 
 
@@ -932,6 +933,56 @@ fn main() {
     println!("str3 = {}",str3);
 }
 ```
+
+## 💠 Closures
+In Rust, closures are anonymous functions that can capture their enclosing environment, allowing them to access variables from the surrounding scope. They can be defined inline using the |params| { body } syntax and are often used for short, one-off operations or as arguments to higher-order functions like iterators. Closures provide a flexible way to create reusable blocks of code with access to their surrounding context.
+
+```rust
+fn main() {
+    println!(" ");
+    println!("Tutorial 18 - Closures ");
+    println!("-----------------------------");
+
+    // closures is a function without a name. 
+    // parameters must be between |  |
+    // let var_name = |param1, param2| -> return_type {Body of function}
+
+    let can_vote = |age: u8| {
+        age >= 18
+    };
+
+    println!("can 20 years human vote? : {}",can_vote(20));
+    println!("can 14 years human vote? : {}",can_vote(14));
+
+    //closures can access variables outside of its body (unlike functions).
+
+    // Access variables outside of its body with borrowing
+    let mut samp1 = 7;
+    let print_var = || println!("samp1 = {}", samp1);
+    print_var();
+    samp1 = 15;
+
+    // Change values, if you mark the closure mutable
+    let mut add_1 = || samp1 += 1;
+    add_1();
+    println!("samp1 = {}", samp1);
+    samp1 = 9;
+    println!("samp1 = {}", samp1);
+
+    // Pass closures to functions (with generic)
+    fn use_func<T>(a: i32, b: i32, func: T) -> i32 where T: Fn(i32, i32) -> i32 { 
+        func(a, b)
+    }
+
+    let sum = |a, b| a + b;
+    let multiple = |a, b| a * b;
+
+    println!("3 + 4 = {}", use_func(3, 4, sum));
+    println!("3 * 4 = {}", use_func(3, 4, multiple));
+    
+}
+```
+
 ## 💠 HashMap
 A HashMap in Rust is a collection that maps keys to values, allowing for efficient lookup, insertion, and deletion based on the keys.
 
