@@ -31,14 +31,15 @@
 11. [Functions, Expressions & Statements](#functions,-expressions-&-statements)
 12. [Pointers](#pointers)
 13. [Array](#array)
-14. [Generics](#generics)
-15. [Error Handling](#error-handling)
-16. [Stack and Heap](#stack-and-heap)
-17. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
-18. [HashMap](#hashMap)
-19. [Structs and Enums](#structs-and-enums)
-20. [Traits](#traits)
-21. [Modules and Crates](#modules-and-crates)
+14. [Iteration](#iteration)
+15. [Generics](#generics)
+16. [Error Handling](#error-handling)
+17. [Stack and Heap](#stack-and-heap)
+18. [Ownership, Borrowing, and Lifetimes](#ownership,-borrowing,-and-lifetimes)
+19. [HashMap](#hashMap)
+20. [Structs and Enums](#structs-and-enums)
+21. [Traits](#traits)
+22. [Modules and Crates](#modules-and-crates)
 
 
 
@@ -676,6 +677,23 @@ fn main() {
     println!("Pop: {:?}", vec2.pop());
 }
 
+```
+## 💠 Iteration
+
+```rust
+fn main() {
+    println!(" ");
+    println!("Tutorial 17 - Iteration ");
+    println!("-----------------------------");
+
+    let mut array_it = [1,2,3,4,5];
+    for val in array_it.iter() {  // iterator is going to cycle through these values by borrowing those values.
+        println!("{}", val);
+    }
+    let mut iter_2 = array_it.iter();
+    println!("1st: {:?}",iter_2.next());
+
+}
 ```
 
 ## 💠 Generics
