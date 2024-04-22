@@ -98,6 +98,11 @@ rustfmt main.rs
 ---------------------------
 .toml --> Toms, Obvious, Minimal, Language
 
+you can add [dependencies] with this:
+```bash
+cargo add ...
+```
+
 ## 💠 Variables, Constants
 
   ```rust
