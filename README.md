@@ -106,6 +106,8 @@ cargo add ...
 
 ## 💠 Variables, Constants
 
+variables are used to store and manipulate data, and their values can change during program execution. Constants, on the other hand, are immutable values whose values cannot change once defined. They are declared using the const keyword and typically hold values that are known at compile time.
+
   ```rust
 fn main() {
     //use "mut" for changing the parameter
@@ -146,6 +148,8 @@ fn main() {
 ```
 
 ## 💠 DATA TYPES
+
+Data types define the kind of values that can be stored and manipulated in a program. They include integers, floating-point numbers, booleans, characters, tuples, arrays, and more. Each data type has specific properties and behaviors, ensuring type safety and efficient memory usage in Rust programs.
 
   ```rust
 fn main() {
