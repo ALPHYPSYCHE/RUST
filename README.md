@@ -726,9 +726,10 @@ fn main() {
 fn get_sum_generic <T:Add<Output = T>>(x: T, y: T) -> T {
     return x + y;
 }
-
-
 ```
+get_sum_generic is a function that takes two arguments, x and y, and returns their sum. The <T:Add<Output = T>> part is where generics come into play. T is a placeholder for any type, and Add<Output = T> is a trait bound that specifies T must implement the Add trait with an output of the same type T.
+
+This means that get_sum_generic can take any two values of the same type that implements the Add trait (like integers or floating-point numbers), add them together, and return a value of the same type.
 
 ## 💠 Error Handling
 
