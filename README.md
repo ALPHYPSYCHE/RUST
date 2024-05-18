@@ -944,7 +944,7 @@ fn main() {
     println!("str3 = {}",str3);
 }
 ```
-Lets code a simple calculator:
+## Lets code a simple calculator:
 
 ```rust
 println! ("Tutorial 23 - simple calculator");
@@ -969,29 +969,42 @@ fn main() {
         // String Slices is a reference to a contiguous sequence of bytes of the string. 
         
         if parts.len() != 3 {
-            println!("Error: Invalid expression");
+            println!("-> Error: Invalid expression");
             continue;
         }
 
         // using f64::from_str()is necessary because the +, -, *, and / operators are not defined for &str.
-        let operand1 = f64::from_str(parts[0]).expect("Error: Invalid number");
+        let number1 = match f64::from_str(parts[0]) {
+            Ok(num) => num,
+            Err(_) => {
+                println!("-> Error: Check your 1st number!");
+                continue;
+            }
+        };
         let operator = parts[1];
-        let operand2 = f64::from_str(parts[2]).expect("Error: Invalid number");
+        let number2 = match f64::from_str(parts[2]) {
+            Ok(num) => num,
+            Err(_) => {
+                println!("-> Error: Check your 2nd number!");
+                continue;
+            }
+        };
 
         let result = match operator {
-            "+" => operand1 + operand2,
-            "-" => operand1 - operand2,
-            "*" => operand1 * operand2,
-            "/" => operand1 / operand2,
-            "%" => operand1 % operand2,
+            "+" => number1 + number2,
+            "-" => number1 - number2,
+            "*" => number1 * number2,
+            "/" => number1 / number2,
+            "%" => number1 % number2,
             _ => {
-                println!("Error: Unknown operator symbol");
+                println!("-> Error: Unknown operator symbol!");
                 continue;
             }
         };
         println!("-> Result: {}", result);
     }
 }
+
 ```
 
 ## 💠 Closures
